@@ -1,8 +1,5 @@
 <h1> This is your cat Information </h1>
 
 <% @kitten.each do |k| %>
-    <h1>Name     : <%= k.name %></h1>
-    <h1>Age      : <%= k.age %></h1>
-    <h1>Cuteness : <%= k.cuteness %></h1>
-    <h1>Softness : <%= k.softness %></h1>
+    <h2><%= link_to k.name, k%></h2>
 <% end %>
