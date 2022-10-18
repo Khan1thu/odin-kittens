@@ -37,6 +37,14 @@ class KittenController < ApplicationController
           render :edit, status: :unprocessable_entity
         end
     end
+
+    def destroy
+        @kitten = Kitten.find(params[:id])
+        @kitten.destroy
+
+        flash[:notice] = "Your kitten has been deleted."
+        redirect_to root_path, status: :see_other
+    end
     
     private
         def kitten_params
