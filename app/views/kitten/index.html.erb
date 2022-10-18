@@ -3,3 +3,6 @@
 <% @kitten.each do |k| %>
     <h2><%= link_to k.name, k%></h2>
 <% end %>
+
+
+<h2><%= link_to "Create New Kitten", new_kitten_path %>
